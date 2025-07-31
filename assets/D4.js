@@ -71,16 +71,16 @@ console.log("Conversione", typeof boundaryResult); //qui vedi che il numero ora 
  ritornare la stringa originale senza alterarla.
 */
 
-/*let str = prompt("Scrivi la tua frase"); //Alessio ricordati che tutto ciò che ti viene detto tramite prompt è comunque stringa!
+/*let userText = prompt("Scrivi la tua frase"); //Alessio ricordati che tutto ciò che ti viene detto tramite prompt è comunque stringa!
 function epify(str) {
   //(str) è fittizio se scrivi const risultatoStr = epify(n) quella n vale come quello str, scrivi str per ricordarti che vuoi un valore stringa magari ma alla fine vicino a epify(esatto qui basta che ti riferisci a qualcosa che ti da valore!)
-  if (str.startsWith("EPICODE")) {
+  if (str.toUpperCase().startsWith("EPICODE")) {
     return str;
   } else {
     return "EPICODE" + " " + str;
   }
 }
-const risultatoStr = epify(str);
+const risultatoStr = epify(userText);
 console.log("Risultato", risultatoStr);
 
 /* ESERCIZIO 6
@@ -89,7 +89,10 @@ console.log("Risultato", risultatoStr);
 */
 
 let npositivo = 7;
-function check3and7(npositivo) {
+function check3and7(numeroPositivo) {
+  /*quando dai il valore (numeroPositivo) essendo che è un valore che sta lì non chiamarlo ocn cose al di fuori altrimenti se lo chiami come una variabile
+   e vai a modificare quella variabile per qualsiasi motivo è come se cambiassi anche lui, metti che ad una certa quella variabile numerica ti diventi stringa, poi quella funzione non funziona più
+  */
   if (npositivo % 3 === 0) {
     return npositivo + " " + " è multiplo di 3";
   } else if (npositivo % 7 === 0) {

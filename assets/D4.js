@@ -123,6 +123,7 @@ console.log("L'inversione", risultatoReverse);
 function upperFirst(parole) {
   const arrayParole = parole.split(" ");
   const paroleMaiuscole = arrayParole.map(function (parola) {
+    //.map è un metodo che passa ogni singolo elemento dell’array alla funzione che gli dai, ovvero detto terra terra è come se mandassi tutte le parole divise fra di loro e le analizza tutte
     const primaLettera = parola.charAt(0).toUpperCase(); // Prendo la prima lettera e la trasformo in maiuscolo
     const restoParola = parola.slice(1); // Prendo il resto della parola senza la prima lettera
     return primaLettera + restoParola;

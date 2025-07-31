@@ -106,7 +106,7 @@ console.log("Il numero:", risultatoCheck);
 */
 
 function reverseString(str) {
-  //Alesiso ricordi prima? Uguale str sta lì mezzo molto è per dirti di aggiungere un qualcosa che sia valore
+  //Alessio ricordi prima? Uguale str sta lì mezzo molto è per dirti di aggiungere un qualcosa che sia valore
   const arrayLettere = str.split(""); // "split("")" ti prende una stringa e te la fa diventare un array e te la divide per lettere se avessi messo uno spazio tra le virgolette, (" "), l'avrebbe divise per parole, utile in caso di frase
   const inversione = arrayLettere.reverse(); // qui inverti le lettere, in caso avessi fatto la divisione per parole inverti la posizione di parole ma non quella delle lettere.
   const assemblamento = inversione.join(""); //qui riunisci tutto come sottoforma di stringa, attenzione ai ("") in questo caso va bene perchè non servono spazi o altri caratteri, altrimenti glie li avresti dovuti inserire dentro.
@@ -122,9 +122,12 @@ console.log("L'inversione", risultatoReverse);
 
 function upperFirst(parole) {
   const arrayParole = parole.split(" ");
-  const inversioneParole = arrayParole.reverse();
-  const assemblamento = inversioneParole.join(" ");
-  return assemblamento;
+  const paroleMaiuscole = arrayParole.map(function (parola) {
+    const primaLettera = parola.charAt(0).toUpperCase(); // Prendo la prima lettera e la trasformo in maiuscolo
+    const restoParola = parola.slice(1); // Prendo il resto della parola senza la prima lettera
+    return primaLettera + restoParola;
+  });
+  return paroleMaiuscole.join(" ");
 }
 const RisultatoUpper = upperFirst("dopo il corso saremo i maghi di JavaScript");
 console.log("Il risultato è:", RisultatoUpper);

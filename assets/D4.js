@@ -88,7 +88,7 @@ console.log("Risultato", risultatoStr);
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
 */
 
-let npositivo = 7;
+let positivNumeber = 7;
 function check3and7(numeroPositivo) {
   /*quando dai il valore (numeroPositivo) essendo che è un valore che sta lì non chiamarlo ocn cose al di fuori altrimenti se lo chiami come una variabile
    e vai a modificare quella variabile per qualsiasi motivo è come se cambiassi anche lui, metti che ad una certa quella variabile numerica ti diventi stringa, poi quella funzione non funziona più
@@ -101,7 +101,7 @@ function check3and7(numeroPositivo) {
     return npositivo + " " + "non è multiplo nè di 3 nè di 7";
   }
 }
-const risultatoCheck = check3and7(npositivo);
+const risultatoCheck = check3and7(positivNumeber);
 console.log("Il numero:", risultatoCheck);
 
 /* ESERCIZIO 7
